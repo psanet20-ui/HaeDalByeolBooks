@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="어머니가 떠난 후, 두 아들이 후회와 사랑을 다시 배워 가는 짧은 동화입니다.">
+  <meta name="description" content="해달별(HaeDalByeol, HDB)의 창작 동화책을 모아 읽는 HaeDalByeolBooks 홈페이지입니다.">
   <meta name="theme-color" content="#f4ecdc">
-  <meta property="og:title" content="나 떠난 후에">
-  <meta property="og:description" content="나중에 후회하지 않도록 오늘 사랑하면서.">
+  <meta property="og:title" content="HaeDalByeolBooks">
+  <meta property="og:description" content="자연 속에서 사람의 이야기를 들려주는 해달별 창작 그림책 모음.">
   <meta property="og:image" content="assets/HDB-banner.png">
-  <title>나 떠난 후에 | 짧은 동화</title>
+  <title>HaeDalByeolBooks | 해달별 창작 동화책</title>
   <style>
     :root {
       color-scheme: light;
@@ -124,11 +124,13 @@
     }
 
     h1 {
+      max-width: 100%;
       margin: 0;
-      font-size: clamp(3rem, 11vw, 7rem);
+      font-size: clamp(2.7rem, 8.5vw, 6.2rem);
       font-weight: 600;
       line-height: 1.08;
       letter-spacing: 0;
+      overflow-wrap: anywhere;
     }
 
     .subtitle {
@@ -226,10 +228,98 @@
       text-decoration: none;
     }
 
+    .library {
+      position: relative;
+      z-index: 1;
+      padding: clamp(38px, 7vw, 78px) clamp(26px, 8vw, 104px);
+      border-top: 1px solid rgba(116,91,62,.14);
+      border-bottom: 1px solid rgba(116,91,62,.14);
+      background: rgba(255, 248, 232, .42);
+    }
+
+    .section-label {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      font-size: .86rem;
+      letter-spacing: .14em;
+    }
+
+    .shelf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .story-card {
+      min-height: 178px;
+      display: grid;
+      align-content: space-between;
+      padding: 22px;
+      border: 1px solid rgba(116,91,62,.18);
+      border-radius: 8px;
+      background: rgba(255,250,240,.78);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 14px 28px rgba(58,43,29,.08);
+    }
+
+    .story-card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .story-card p {
+      margin: 0;
+      color: #6b5e53;
+      font-size: .98rem;
+      line-height: 1.65;
+    }
+
+    .story-card .meta {
+      margin-top: 22px;
+      color: var(--accent);
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      font-size: .84rem;
+      letter-spacing: .08em;
+    }
+
+    .story-card.is-coming {
+      border-style: dashed;
+      background: rgba(255,250,240,.46);
+      box-shadow: none;
+    }
+
     .content {
       position: relative;
       z-index: 1;
       padding: clamp(36px, 7vw, 88px) clamp(26px, 8vw, 104px) clamp(56px, 9vw, 110px);
+    }
+
+    .story-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .story-heading p {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      font-size: .9rem;
+      letter-spacing: .12em;
+    }
+
+    .story-heading h2 {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: 0;
     }
 
     article {
@@ -310,6 +400,8 @@
       .book::after { display: none; }
       .hero { min-height: 78vh; padding-top: 34px; }
       .brand-banner { margin-bottom: 28px; border-radius: 0; }
+      .shelf-grid { grid-template-columns: 1fr; }
+      .story-card { min-height: 152px; }
       blockquote { margin-left: -4px; margin-right: -4px; }
     }
   </style>
@@ -321,17 +413,41 @@
         <figure class="brand-banner">
           <img src="assets/HDB-banner.png" alt="해달별 HDB 채널 배너">
         </figure>
-        <p class="kicker">HDB ORIGINAL STORY</p>
-        <h1>나 떠난 후에</h1>
-        <p class="subtitle">어머니가 떠난 뒤에야 두 아들이 깨닫게 되는, 너무 늦기 전에 전해야 할 사랑에 대한 이야기.</p>
+        <p class="kicker">HDB ORIGINAL BOOKS</p>
+        <h1>HaeDalByeolBooks</h1>
+        <p class="subtitle">해달별이 자연 속에서 들려주는 사람의 이야기. 한 권씩 쌓여 갈 창작 동화책 책장입니다.</p>
         <div class="brand-chip">
           <img src="assets/HDB-logo.png" alt="">
           <span>HaeDalByeol · 해달별</span>
         </div>
-        <a class="scroll-cue" href="#story" aria-label="본문으로 이동">&darr;</a>
+        <a class="scroll-cue" href="#library" aria-label="책장으로 이동">&darr;</a>
       </header>
 
+      <section id="library" class="library" aria-labelledby="library-title">
+        <p class="section-label" id="library-title">HDB BOOKSHELF</p>
+        <div class="shelf-grid">
+          <a class="story-card" href="#story">
+            <div>
+              <h2>나 떠난 후에</h2>
+              <p>어머니가 떠난 뒤에야 두 아들이 깨닫게 되는, 너무 늦기 전에 전해야 할 사랑에 대한 이야기.</p>
+            </div>
+            <span class="meta">NOW READING</span>
+          </a>
+          <div class="story-card is-coming">
+            <div>
+              <h2>다음 이야기</h2>
+              <p>새로운 해달별 동화가 완성되면 이 책장에 한 권씩 더해집니다.</p>
+            </div>
+            <span class="meta">COMING SOON</span>
+          </div>
+        </div>
+      </section>
+
       <section id="story" class="content">
+        <div class="story-heading">
+          <p>FIRST BOOK</p>
+          <h2>나 떠난 후에</h2>
+        </div>
         <article>
           <p class="lead">두 아들은 독립해 어머니와 따로 살고 있었습니다.</p>
           <p>시간이 맞는 주말이면 어머니의 집에 들러 함께 아침을 먹곤 했습니다.</p>
@@ -585,7 +701,7 @@
 
       <footer>
         <img src="assets/HDB-logo.png" alt="해달별 로고">
-        <span>HDB · HaeDalByeol · 나 떠난 후에</span>
+        <span>HaeDalByeolBooks · HDB</span>
       </footer>
     </section>
   </main>
