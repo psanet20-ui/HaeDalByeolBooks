@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#f4ecdc">
   <meta property="og:title" content="나 떠난 후에">
   <meta property="og:description" content="나중에 후회하지 않도록 오늘 사랑하면서.">
+  <meta property="og:image" content="assets/HDB-banner.png">
   <title>나 떠난 후에 | 짧은 동화</title>
   <style>
     :root {
@@ -91,15 +92,32 @@
     .hero {
       position: relative;
       z-index: 1;
-      min-height: 82vh;
+      min-height: 88vh;
       display: grid;
       align-content: center;
-      padding: clamp(72px, 11vw, 132px) clamp(30px, 8vw, 98px) clamp(48px, 7vw, 84px);
+      padding: clamp(42px, 7vw, 78px) clamp(26px, 7vw, 78px) clamp(44px, 6vw, 72px);
       text-align: center;
     }
 
+    .brand-banner {
+      width: min(100%, 840px);
+      aspect-ratio: 16 / 9;
+      margin: 0 auto 34px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 54px rgba(58, 43, 29, .16);
+      background: #f5eddb;
+    }
+
+    .brand-banner img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .kicker {
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       color: var(--muted);
       font-size: .92rem;
       letter-spacing: .16em;
@@ -115,10 +133,32 @@
 
     .subtitle {
       width: min(100%, 520px);
-      margin: 28px auto 0;
+      margin: 24px auto 0;
       color: #5f554d;
       font-size: clamp(1rem, 2.2vw, 1.22rem);
       line-height: 1.8;
+    }
+
+    .brand-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 26px auto 0;
+      padding: 8px 14px;
+      border: 1px solid rgba(116,91,62,.18);
+      border-radius: 999px;
+      background: rgba(255,250,240,.72);
+      color: #514439;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      font-size: .92rem;
+      line-height: 1;
+    }
+
+    .brand-chip img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      border-radius: 50%;
     }
 
     .hero-art {
@@ -242,10 +282,20 @@
     footer {
       position: relative;
       z-index: 1;
+      display: grid;
+      justify-items: center;
+      gap: 10px;
       padding: 0 clamp(26px, 8vw, 104px) 46px;
       text-align: center;
       color: var(--muted);
       font-size: .92rem;
+    }
+
+    footer img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      opacity: .88;
     }
 
     @keyframes breathe {
@@ -258,7 +308,8 @@
       .book { border: 0; border-radius: 0; box-shadow: none; }
       .book::before { inset: 12px; }
       .book::after { display: none; }
-      .hero { min-height: 76vh; }
+      .hero { min-height: 78vh; padding-top: 34px; }
+      .brand-banner { margin-bottom: 28px; border-radius: 0; }
       blockquote { margin-left: -4px; margin-right: -4px; }
     }
   </style>
@@ -267,16 +318,15 @@
   <main class="page">
     <section class="book">
       <header class="hero">
-        <p class="kicker">짧은 동화</p>
+        <figure class="brand-banner">
+          <img src="assets/HDB-banner.png" alt="해달별 HDB 채널 배너">
+        </figure>
+        <p class="kicker">HDB ORIGINAL STORY</p>
         <h1>나 떠난 후에</h1>
         <p class="subtitle">어머니가 떠난 뒤에야 두 아들이 깨닫게 되는, 너무 늦기 전에 전해야 할 사랑에 대한 이야기.</p>
-        <div class="hero-art" aria-hidden="true">
-          <div class="window"></div>
-          <div class="steam one"></div>
-          <div class="steam two"></div>
-          <div class="steam three"></div>
-          <div class="bowl"></div>
-          <div class="table"></div>
+        <div class="brand-chip">
+          <img src="assets/HDB-logo.png" alt="">
+          <span>HaeDalByeol · 해달별</span>
         </div>
         <a class="scroll-cue" href="#story" aria-label="본문으로 이동">&darr;</a>
       </header>
@@ -533,7 +583,10 @@
         </article>
       </section>
 
-      <footer>나 떠난 후에 &middot; GitHub Pages용 웹 동화</footer>
+      <footer>
+        <img src="assets/HDB-logo.png" alt="해달별 로고">
+        <span>HDB · HaeDalByeol · 나 떠난 후에</span>
+      </footer>
     </section>
   </main>
 </body>

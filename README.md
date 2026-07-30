@@ -1,15 +1,19 @@
-# 나 떠난 후에
+# HDB-books
 
-어머니와 두 아들에 관한 짧은 동화를 GitHub Pages에서 바로 볼 수 있도록 만든 정적 웹페이지입니다.
+해달별(HaeDalByeol, HDB) 채널의 동화책을 GitHub Pages에서 볼 수 있도록 만든 정적 웹페이지입니다.
+
+현재 수록작은 `나 떠난 후에`입니다.
 
 ## 파일
 
 - `index.html`: 웹페이지 본문과 스타일이 모두 들어 있는 단일 HTML 파일
+- `assets/HDB-banner.png`: 해달별 채널 배너 이미지
+- `assets/HDB-logo.png`: 해달별 로고 이미지
 - `README.md`: 프로젝트 설명과 배포 방법
 
 ## GitHub Pages 배포
 
-1. GitHub에서 새 저장소를 만듭니다. 예: `na-tteonan-hue`
+1. GitHub에서 새 저장소를 만듭니다. 예: `HDB-books`
 2. 이 폴더의 파일을 저장소에 올립니다.
 3. 저장소의 `Settings` -> `Pages`로 이동합니다.
 4. `Build and deployment`에서 `Deploy from a branch`를 선택합니다.
@@ -19,4 +23,10 @@
 
 ```text
 https://사용자이름.github.io/저장소이름/
+```
+
+예상 주소:
+
+```text
+https://psanet20-ui.github.io/HDB-books/
 ```
