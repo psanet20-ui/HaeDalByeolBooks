@@ -248,23 +248,44 @@
 
     .shelf-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      max-width: 720px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 940px;
       margin: 0 auto;
     }
 
     .story-card {
-      min-height: 178px;
+      min-height: 100%;
       display: grid;
       align-content: space-between;
-      padding: 22px;
+      overflow: hidden;
       border: 1px solid rgba(116,91,62,.18);
       border-radius: 8px;
       background: rgba(255,250,240,.78);
       color: inherit;
       text-decoration: none;
       box-shadow: 0 14px 28px rgba(58,43,29,.08);
+    }
+
+    .story-card-body {
+      display: grid;
+      align-content: space-between;
+      min-height: 178px;
+      padding: 20px;
+    }
+
+    .story-cover {
+      aspect-ratio: 16 / 9;
+      margin: 0;
+      overflow: hidden;
+      background: #efe2c9;
+    }
+
+    .story-cover img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .story-card h2 {
@@ -293,6 +314,10 @@
       border-style: dashed;
       background: rgba(255,250,240,.46);
       box-shadow: none;
+    }
+
+    .story-card.is-coming .story-card-body {
+      min-height: 220px;
     }
 
     .content {
@@ -540,6 +565,10 @@
       45% { transform: translateY(-10px) scaleX(1.25); opacity: .56; }
     }
 
+    @media (max-width: 900px) {
+      .shelf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     @media (max-width: 640px) {
       .page { width: 100%; padding: 0; }
       .book { border: 0; border-radius: 0; box-shadow: none; }
@@ -575,18 +604,85 @@
         <p class="section-label" id="library-title">HDB BOOKSHELF</p>
         <div class="shelf-grid">
           <a class="story-card" href="#story">
-            <div>
-              <h2>나 떠난 후에</h2>
-              <p>어머니의 편지를 통해 사랑과 후회의 의미를 돌아보는 해달별 첫 번째 소개 작품.</p>
+            <figure class="story-cover">
+              <img src="assets/HDB-banner.png" alt="">
+            </figure>
+            <div class="story-card-body">
+              <div>
+                <h2>나 떠난 후에</h2>
+                <p>어머니의 편지를 통해 사랑과 후회의 의미를 돌아보는 해달별 소개 작품.</p>
+              </div>
+              <span class="meta">FEATURED BOOK</span>
             </div>
-            <span class="meta">FEATURED BOOK</span>
+          </a>
+          <a class="story-card" href="https://www.youtube.com/channel/UCc6RPSuqw6WlPRljfWWrb7A" target="_blank" rel="noopener noreferrer">
+            <figure class="story-cover">
+              <img src="assets/books/kkoma.jpg" alt="꼬마 썸네일">
+            </figure>
+            <div class="story-card-body">
+              <div>
+                <h2>꼬마</h2>
+                <p>작고 여린 존재가 자기만의 마음과 길을 찾아가는 해달별 영상 동화.</p>
+              </div>
+              <span class="meta">YOUTUBE STORY</span>
+            </div>
+          </a>
+          <a class="story-card" href="https://www.youtube.com/channel/UCc6RPSuqw6WlPRljfWWrb7A" target="_blank" rel="noopener noreferrer">
+            <figure class="story-cover">
+              <img src="assets/books/acorn.jpg" alt="너는 도토리니까 썸네일">
+            </figure>
+            <div class="story-card-body">
+              <div>
+                <h2>너는 도토리니까</h2>
+                <p>아직 작아 보여도 자기 안에 숲을 품고 있는 존재에게 건네는 이야기.</p>
+              </div>
+              <span class="meta">YOUTUBE STORY</span>
+            </div>
+          </a>
+          <a class="story-card" href="https://www.youtube.com/channel/UCc6RPSuqw6WlPRljfWWrb7A" target="_blank" rel="noopener noreferrer">
+            <figure class="story-cover">
+              <img src="assets/books/rest.jpg" alt="쉬었다 가렴 썸네일">
+            </figure>
+            <div class="story-card-body">
+              <div>
+                <h2>쉬었다 가렴</h2>
+                <p>잠시 멈추어도 괜찮다고, 지친 마음에게 조용히 말을 건네는 동화.</p>
+              </div>
+              <span class="meta">YOUTUBE STORY</span>
+            </div>
+          </a>
+          <a class="story-card" href="https://www.youtube.com/channel/UCc6RPSuqw6WlPRljfWWrb7A" target="_blank" rel="noopener noreferrer">
+            <figure class="story-cover">
+              <img src="assets/books/soil.jpg" alt="아직은 흙 썸네일">
+            </figure>
+            <div class="story-card-body">
+              <div>
+                <h2>아직은 흙</h2>
+                <p>아직 드러나지 않은 시간 속에서도 천천히 자라나는 가능성의 이야기.</p>
+              </div>
+              <span class="meta">YOUTUBE STORY</span>
+            </div>
+          </a>
+          <a class="story-card" href="https://www.youtube.com/channel/UCc6RPSuqw6WlPRljfWWrb7A" target="_blank" rel="noopener noreferrer">
+            <figure class="story-cover">
+              <img src="assets/books/bamboo.jpg" alt="어린 대나무는 소리가 나지 않았습니다 썸네일">
+            </figure>
+            <div class="story-card-body">
+              <div>
+                <h2>어린 대나무는 소리가 나지 않았습니다</h2>
+                <p>조용히 뿌리를 내리는 시간의 힘을 담은 성장 이야기.</p>
+              </div>
+              <span class="meta">YOUTUBE STORY</span>
+            </div>
           </a>
           <div class="story-card is-coming">
-            <div>
-              <h2>다음 이야기</h2>
-              <p>새로운 해달별 동화가 완성되면 이 책장에 한 권씩 더해집니다.</p>
+            <div class="story-card-body">
+              <div>
+                <h2>다음 이야기</h2>
+                <p>새로운 해달별 동화가 완성되면 이 책장에 한 권씩 더해집니다.</p>
+              </div>
+              <span class="meta">COMING SOON</span>
             </div>
-            <span class="meta">COMING SOON</span>
           </div>
         </div>
       </section>
